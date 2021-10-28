@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+:root {
+  --dark-purple: #1e152aff;
+  --deep-space-sparkle: #4e6766ff;
+  --cadet-blue: #5ab1bbff;
+  --pistachio: #a5c882ff;
+  --jasmine: #f7dd72ff;
+  --floral-white: #fff8f0ff;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  background: var(--floral-white);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header {
+  background: var(--dark-purple);
+  color: var(--floral-white);
+}
+/* home page css */
+
+.search-container {
+  border-radius: 10px;
+  height: 40px;
+}
+.search-text {
+  width: 90%;
+  height: 100%;
+  border: 0;
+  outline: none;
+}
+.search-text::placeholder {
+  color: var(--floral-black);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* company search result card  */
+.company-name span,
+.company-reg_no span {
+  font-size: 18px;
+  font-weight: 800;
+}
+.company-name p,
+.company-reg_no p {
+  font-size: 14px;
+  text-transform: capitalize !important;
+}
+.button-container {
+  width: 90%;
+}
+.button {
+  border-radius: 10px;
+  min-width: 80%;
+  background: var(--dark-purple);
+  color: var(--floral-white);
+}
+.result-card {
+  border-radius: 10px;
+  min-height: 240px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* footer section */
+footer {
+  background: var(--dark-purple);
+  color: var(--floral-white);
 }
