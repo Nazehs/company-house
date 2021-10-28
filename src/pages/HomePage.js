@@ -1,5 +1,6 @@
 import { ReactComponent as SearchIcon } from "../assets/images/search-icon.svg";
-import ResultCard from "../components/ResultCard";
+import CompaniesResultsContainer from "../components/ResultCard";
+import ResultCard, { ResultCards } from "../components/ResultCard";
 const results = [
   {
     company_number: "02468686",
@@ -567,13 +568,14 @@ const HomePage = () => {
           {/* search results */}
           <div className="row gy-3  mb-5 gx-5">
             <h3>Search Results</h3>
-            {results.map((result, index) => (
+            {<CompaniesResultsContainer />}
+            {/* {results.map((result, index) => (
               <ResultCard card={result} key={index} />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
-      <footer className="text-center mt-5">
+      <footer className="text-center mt-5 fixed-bottom">
         <div className="container py-3">All Right Reserve &copy; 2021</div>
       </footer>
     </div>
