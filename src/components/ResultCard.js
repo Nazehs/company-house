@@ -40,13 +40,11 @@ export const ResultCards = ({
       }
     }
     fetchData();
-
-    // const result = await fetchCompanies();
   }, [fetchCompanies]);
 
   // return this if an error occured
   if (isError) {
-    return <h3>Oops! an error occured!... Try again later</h3>;
+    return <h3>Oops! an error occurred!... Try again later</h3>;
   }
 
   if (companies.length < 1 && searched) {
@@ -64,17 +62,19 @@ export const ResultCards = ({
         <CompanyCard card={company} key={index} />
       ))}
       <div className="container">
-        <div className="row">
-          <PaginationComponent
-            className="pagination-bar"
-            currentPage={currentPage}
-            totalCount={totalSize}
-            pageSize={pageSize}
-            onPageChange={(page) => {
-              setCurrentPage(page);
-              handlePagination(page);
-            }}
-          />
+        <div className="row mt-2 justify-content-end">
+          <div className="col-md-6 text-end pt-5">
+            <PaginationComponent
+              className="pagination-bar"
+              currentPage={currentPage}
+              totalCount={totalSize}
+              pageSize={pageSize}
+              onPageChange={(page) => {
+                setCurrentPage(page);
+                handlePagination(page);
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

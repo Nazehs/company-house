@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const CompanyCard = ({ card }) => {
   return (
     <div className="col-md-3 mb-3">
@@ -11,7 +12,9 @@ const CompanyCard = ({ card }) => {
           <p>{card.company_number} </p>
         </div>
         <div className="button-container pt-3 text-center">
-          <button className="button">View Details</button>
+          <Link to={`/company-details/${card.company_number}`}>
+            <button className="button">View Details</button>
+          </Link>
         </div>
       </div>
     </div>

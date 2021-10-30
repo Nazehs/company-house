@@ -7,6 +7,7 @@ export const fetchData = async (url) => {
     method: "GET",
     headers: myHeaders,
     mode: "cors",
+    crossOrigin: true,
     redirect: "follow",
   };
   const data = await fetch(

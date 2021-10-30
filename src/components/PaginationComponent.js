@@ -1,7 +1,6 @@
 import React from "react";
 import classnames from "classnames";
 import { Pagination, DOTS } from "./shared/Pagination";
-// import "./pagination.scss";
 const PaginationComponent = (props) => {
   const {
     onPageChange,
