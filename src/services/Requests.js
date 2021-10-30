@@ -13,6 +13,5 @@ export const fetchData = async (url) => {
     `${process.env.REACT_APP_API_BASE_URL}/${url}`,
     requestOptions
   );
-
   return await data.json();
 };
